@@ -1,27 +1,16 @@
-let count = document.getElementById("count-el");
-// console.log(count);
-let c = 0;
-butt = document.getElementById("increment-btn");
-// butt.addEventListener(function (e) {
-//   c += 1;
-//   console.log(e);
-//   count.innerHTML = c;
-// });
+let countEl = document.getElementById("count-el");
+let count = 0;
+let counts = document.getElementById("saved-numbers");
 
 function increment() {
-  c += 1;
-  count.innerHTML = c;
+  count += 1;
+  countEl.innerText = count;
 }
+
+let s = "Previous Entries : ";
 function save() {
-  console.log(c);
+  s += count + " - ";
+  counts.innerText = s;
+  count = 0;
+  countEl.innerText = count;
 }
-
-// let c = 0;
-// function incr(d) {
-//   c += d;
-// }
-
-// incr(3);
-// incr(3);
-// incr(3);
-// console.log(c);
